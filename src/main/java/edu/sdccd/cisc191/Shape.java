@@ -1,6 +1,6 @@
 package edu.sdccd.cisc191;
 
-public abstract class Shape implements Measurable {
+public abstract class Shape implements Measurable, Comparable<Shape> {
     String name;
 
     Shape(String name) {
@@ -12,6 +12,15 @@ public abstract class Shape implements Measurable {
 
     public abstract double area();
     public abstract double perimeter();
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int compareTo(Shape other) {
+        return this.name.compareTo(other.name);
+    }
 
     public String describe() {
         return String.format("%s[name=%s, area=%.2f, perimeter=%.2f]",
