@@ -1,4 +1,3 @@
-
 package edu.sdccd.cisc191;
 
 import java.util.*;
@@ -12,7 +11,7 @@ public class Main {
         shapes.add(new Triangle("C",3,4,5));
 
         for(Shape s:shapes){
-            System.out.println(s.describe() + " area=" + s.area());
+            System.out.println(s.describe());
         }
 
         shapes.sort(Comparator.comparingDouble(Shape::area));
