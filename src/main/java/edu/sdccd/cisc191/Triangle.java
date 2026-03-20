@@ -39,11 +39,11 @@ public class Triangle extends Shape {
         return Double.compare(this.a, other.a) == 0
                 && Double.compare(this.b, other.b) == 0
                 && Double.compare(this.c, other.c) == 0
-                && this.name.equals(other.name);
+                && this.getName().equals(other.getName());
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(name, a, b, c);
+        return java.util.Objects.hash(getName(), a, b, c);
     }
 }
