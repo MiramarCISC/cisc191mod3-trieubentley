@@ -30,11 +30,11 @@ public class Rectangle extends Shape {
         Rectangle other = (Rectangle) obj;
         return Double.compare(this.width, other.width) == 0
                 && Double.compare(this.height, other.height) == 0
-                && this.name.equals(other.name);
+                && this.getName().equals(other.getName());
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(name, width, height);
+        return java.util.Objects.hash(getName(), width, height);
     }
 }

@@ -1,7 +1,7 @@
 package edu.sdccd.cisc191;
 
 public abstract class Shape implements Measurable, Comparable<Shape> {
-    String name;
+    private final String name;
 
     Shape(String name) {
         if (name == null || name.isBlank()) {
